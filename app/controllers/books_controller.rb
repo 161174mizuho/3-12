@@ -1,4 +1,11 @@
 class BooksController < ApplicationController
-  def top
+  def start
   end
+  
+  def new
+  end
+  
+  def show
+  end
+  
 end
