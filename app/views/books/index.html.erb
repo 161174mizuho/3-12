@@ -23,10 +23,10 @@
         <%= link_to "Show", book_path(book.id) %>
       </td>
       <td>
-          <%= link_to "Edit", edit_book_path(@book.id) %>
+        <%= link_to "Edit", edit_book_path(book.id) %>
       </td>
       <td>
-          <%= link_to "Destroy", "books" %>
+        <%= link_to "Destroy", destroy_book_path(book.id),method: :delete, "data-confirm" => "Are you sure?" %>
       </td>
     </tr>
     <% end %>
@@ -35,11 +35,15 @@
 
 <h2>New Book</h2>
 <%= form_with model: @book, url:"/books", method: :post,  local: true do |f| %>
-  <h3>Title</h3>
+  <div class = "field">
+    <ladel for = "book_title">Title</ladel>
   <%= f.text_field :title %>
+  </div>
+
+  <div class = "field">
+    <ladel for = "book_body">Body</ladel>
+    <%= f.text_area :body %>
+  </div>
   
-  <h3>Body</h3>
-  <%= f.text_area :body %>
-  
-  <%= f.submit"Create Book" %>
+  <%= f.submit" Create Book " %>
 <% end %>

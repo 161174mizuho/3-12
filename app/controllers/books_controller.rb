@@ -20,9 +20,15 @@ class BooksController < ApplicationController
   end
   
   def update
-    book = Book.find(params[:id])
-    book.update(book_params)
+    book = Book.find(params[:id])#editから送られてきた編集したデータをbookに入れる
+    book.update(book_params)#bookに入れた内容で更新する
     redirect_to book_path(book.id)
+  end
+  
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to "/books"
   end
 
   

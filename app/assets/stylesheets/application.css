@@ -18,10 +18,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   margin: 33px;
+  color: #333;
+  background-color: #fff;
+  line-height: 18px;
+  display: block;/*これで横並びにできないのはなぜか*/
 }
 
 
@@ -34,4 +39,38 @@ p {
 
 a {
   color: #000;
+}
+
+th {
+  padding-bottom: 5px;  
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h1 {
+  margin: 17px 0;
+}
+
+h2 {
+  margin: 16px 0;
+}
+
+.field {
+  margin-bottom: 10px;
+} 
+
+ladel {
+  display: block;
+}
+
+input type {
+  padding: 1px 2px;
+}
+
+.action {
+  margin-bottom: 10px;
 }
