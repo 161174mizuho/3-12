@@ -1,15 +1,15 @@
-
-<p>Book was successfully created.</p>
-
-<p>
-  <strong>Title:</strong>
-</p>
-<%= @book.title %>
+<div class= "flash">
+  <%= flash[:notice] %>
+</div>
 
 <p>
-  <strong>Body:</strong>
+  <strong>Title:</strong><%= @book.title %>
 </p>
-<%= @book.body %>
+
+<p>
+  <strong>Body:</strong><%= @book.body %>
+
+</p>
 
 <div class=  "action">
 <%= link_to "Edit", edit_book_path(@book.id) %>
