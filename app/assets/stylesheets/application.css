@@ -35,6 +35,7 @@ p , ul, td{
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
+  padding-inline-start: 40px;
 }
 
 a {
